@@ -3,13 +3,16 @@ angular.module('imagesApp').controller('imageController', ['$scope','$uibModal',
 
 	$scope.images = [];
 
+
 	$http.get('https://jsonplaceholder.typicode.com/photos').success(function(data){
-		//console.log(data);
 		$scope.images = data;
+	}).error(function(error,status){
+		$scope.data.error = {message:error, status:status};
+		console.log($scope.data.error.status);
 	});
 
 	$scope.open = function (titlename) {
-		console.log(titlename);
+		//console.log(titlename);
 		var modalInstance = $uibModal.open({
 			  controller: 'PopupCont',
 			templateUrl: 'popup.html',

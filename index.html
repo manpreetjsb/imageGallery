@@ -14,7 +14,7 @@
 <ul class="row first list-unstyled">
 	<li class="col-lg-2 col-md-4 col-sm-3 col-xs-4 col-xxs-12 bspHasModal" dir-paginate="img in images | itemsPerPage : 20">
 		<div class="imgWrapper">
-			<a ng-click="open($index)" class="btn"><img alt="Rocking the night away" ng-src="{{img.thumbnailUrl}}" class="img-responsive thumbnail"></a>
+			<a ng-click="open($index)" class="btn"><img alt="{{img.title}}" ng-src="{{img.thumbnailUrl}}" class="img-responsive thumbnail"></a>
 		</div>
 	</li>
 </ul>
